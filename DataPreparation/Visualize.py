@@ -165,12 +165,12 @@ def visualize_continuous_data(x_data, sample_size=10000):
     
     
 
-def convey_insights(bullets_arr):
+def convey_insights(bullets_arr, title="Insights"):
     '''
     Give it a bullet points array, give you bullet points in markdown for insights.
     '''
     # make a markdown string with the bullets
-    markdown_str = '<h3><font color="pink" size=5>Insights</font></h3> <font size=4>\n'
+    markdown_str = f'<h3><font color="pink" size=5>{title}</font></h3> <font size=4>\n'
     
     for bullet in bullets_arr:
         markdown_str += '<font color="pink">✦</font> ' + bullet + '<br><br>'

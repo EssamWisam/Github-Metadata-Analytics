@@ -16,7 +16,8 @@ def split_script():
     results do not change the random state from 42.
     '''
     # read the data
-    ds = pd.read_csv('../DataFiles/dataset.csv')
+    module_dir = os.path.dirname(__file__)
+    ds = pd.read_csv(os.path.join(module_dir, '../DataFiles/dataset.csv'))
 
     # randomly shuffle the data
     ds = ds.sample(frac=1, random_state=42).reset_index(drop=True)
@@ -38,11 +39,11 @@ def read_data(kind=None, y_data_col=None, execlude=[], split="train", fix=False,
     execlude allows excluding specific columns from the dataset.
     fix fixes any issies in the dataset, for a per-issue decisions, consider the rest of the parameters.
     '''
+    module_dir = os.path.dirname(__file__)
     # if there exists not a train, val or test file, split the dataset
-    if not os.path.exists('../DataFiles/train.csv') and not os.path.exists('../DataFiles/val.csv') and not os.path.exists('../DataFiles/test.csv'):
+    if not os.path.exists(os.path.join(module_dir, '../DataFiles/train.csv')) and not os.path.exists(os.path.join(module_dir, '../DataFiles/val.csv')) and not os.path.exists(os.path.join(module_dir, '../DataFiles/test.csv')):
         split_script()
     
-    module_dir = os.path.dirname(__file__)
     if split == "train":    path = os.path.join(module_dir, '../DataFiles/train.csv')
     elif split == "val":    path = os.path.join(module_dir, '../DataFiles/val.csv')
     elif split == "test":   path = os.path.join(module_dir, '../DataFiles/test.csv')
@@ -64,6 +65,10 @@ def read_data(kind=None, y_data_col=None, execlude=[], split="train", fix=False,
     ds['createdAt'] = pd.to_datetime(ds['createdAt'])
     # cast isArchived, defaultBranchCommitCount
     ds['isArchived'] = ds['isArchived'].astype(int)
+    # cast isForked to int
+    ds['isFork'] = ds['isFork'].astype(int)
+    # cast forkingAllowed to int
+    ds['forkingAllowed'] = ds['forkingAllowed'].astype(int)
     
     if handle_useless == "obvious":
         # drop useless columns
