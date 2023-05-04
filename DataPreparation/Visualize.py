@@ -64,7 +64,7 @@ def plot_feature_histograms(x_data, sample_size):
     for feat in x_data.columns:
         if type(x_data.iloc[0, x_data.columns.get_loc(feat)]) == str:
             x_data[feat] = pd.factorize(x_data[feat])[0]
-            
+
     # get the number of rows and columns needed
     num_rows = len(x_data.columns) // 4 + 1
     num_cols = 4
@@ -165,6 +165,7 @@ def visualize_continuous_data(x_data, sample_size=10000):
     
     
 
+
 def convey_insights(bullets_arr):
     '''
     Give it a bullet points array, give you bullet points in markdown for insights.
@@ -177,3 +178,25 @@ def convey_insights(bullets_arr):
     # display the markdown string
     markdown_str += '</font>'
     display(Markdown(markdown_str))
+
+def correlation_matrix(x_data, sample_size=10000):
+    '''
+    Plot a correlation matrix for continuous features.
+    '''
+
+    # Get sample
+    x_data = x_data.sample(sample_size)
+
+    # Get only the continuous features
+    cont_feats = [feat for feat in x_data.columns if type(x_data.iloc[0, x_data.columns.get_loc(feat)]) != str]
+    x_data_cont = x_data[cont_feats]
+    # Execlude the isArchived column
+    x_data_cont = x_data_cont.drop('isArchived', axis=1)
+    # Calculate the correlation matrix
+    corr_matrix = x_data_cont.corr()
+
+    # Plot the correlation matrix as a heatmap
+    plt.figure(figsize=(12, 10))
+    sns.heatmap(corr_matrix, annot=True, cmap="RdBu_r", fmt='.2f', linewidths=0.5, center=0, vmin=-1, vmax=1)
+    plt.title("Correlation Matrix of Numerical Features")
+    plt.show()
