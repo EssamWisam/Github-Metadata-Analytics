@@ -9,6 +9,10 @@ import sys
 import ast
 sys.path.append('../')
 from utils import nice_table
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import IterativeImputer
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import SGDRegressor
 
 def split_script():
     '''
@@ -161,17 +165,47 @@ def get_date_features(x_data_d, date_col):
     return cols
 
 
-def impute_outliers(x_data):
+def impute_outliers(x_data,imputation_method="median", n_imputations=1):
     '''
     Discards outliers from the dataset.
     '''
     # for each numerical column if the IQD condition is met
     x_data_o = x_data.copy()
     for feat in x_data_o.columns:
-        if type(x_data_o.iloc[0, x_data_o.columns.get_loc(feat)]) != str:
+        if type(x_data_o.iloc[0, x_data_o.columns.get_loc(feat)]) in [np.float64, np.int64]:
             Q1, Q3 = x_data_o[feat].quantile(0.25), x_data_o[feat].quantile(0.75)
             iqr = Q3 - Q1
             # replace outliers with the median
-            x_data_o.loc[x_data_o[feat] > Q3 + 3 * iqr, feat] = x_data_o[feat].median()
+            if imputation_method == "median":
+              x_data_o.loc[x_data_o[feat] > Q3 + 3 * iqr, feat] = x_data_o[feat].median()
+            elif imputation_method == "multiple":
+              x_data_o.loc[x_data_o[feat] > Q3 + 3 * iqr, feat] = np.nan #remove outliers
 
-    return x_data_o
+    if imputation_method == "multiple":
+      np.random.seed(42)
+      seeds = np.random.randint(0, 10000, n_imputations)
+      imputed_datasets = []
+      for seed in seeds:
+        # initialize the used methods
+        imputer = IterativeImputer(estimator=SGDRegressor(),
+                                   max_iter=10, 
+                                   random_state=seed, 
+                                   n_nearest_features=5)
+        scaler = StandardScaler()
+        # remove categorical columns
+        x_data_o_temp = x_data_o.select_dtypes(include=[np.float64, np.int64])
+        columns = x_data_o_temp.columns
+        # scale the data for numerical stability
+        x_data_o_temp = pd.DataFrame(scaler.fit_transform(x_data_o_temp), columns=columns)
+        # impute the outliers
+        x_data_o_temp = pd.DataFrame(imputer.fit_transform(x_data_o_temp), columns=columns)
+        # reverse the scaling
+        x_data_o_temp = pd.DataFrame(scaler.inverse_transform(x_data_o_temp), columns=columns)
+        # get back the categorical columns
+        x_data_o_temp = pd.concat([x_data.select_dtypes(exclude=[np.float64, np.int64]), x_data_o_temp], axis=1)
+        imputed_datasets.append(x_data_o_temp)
+
+    if (len(imputed_datasets)==1):
+      return imputed_datasets[0]
+    else:
+      return imputed_datasets
