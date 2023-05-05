@@ -7,6 +7,8 @@ import seaborn as sns
 from IPython.display import display, HTML, Markdown, Latex
 import sys
 import ast
+# sys.path.append('../')
+# from utils import nice_table
 sys.path.append('../')
 from utils import nice_table
 from sklearn.experimental import enable_iterative_imputer
