@@ -213,3 +213,7 @@ def impute_outliers(x_data,imputation_method="median", n_imputations=1):
             return imputed_datasets
 
     return x_data_o
+
+def impute_missing(x_data):
+    x_data = x_data.replace(-1, 0)
+    return x_data
