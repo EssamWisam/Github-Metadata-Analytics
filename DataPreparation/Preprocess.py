@@ -10,7 +10,7 @@ import ast
 # sys.path.append('../')
 # from utils import nice_table
 sys.path.append('../')
-from utils import nice_table
+#from utils import nice_table
 from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 from sklearn.preprocessing import StandardScaler
