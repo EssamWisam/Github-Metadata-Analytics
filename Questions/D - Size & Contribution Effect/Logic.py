@@ -47,11 +47,6 @@ def visualize(map_year_data):
         plt.show()
 
 
-
-
-
-    
-
 def get_top_k_programming_languages_over_time(data, k):
     ''''
     split the data into years and get the top k programming languages for each year
@@ -64,14 +59,20 @@ def get_top_k_programming_languages_over_time(data, k):
 
     # loop over data and split it into years
     for year in data['createdAt'].dt.year.unique():
-        map_year_data[year] = get_top_k_programming_languages_per_year(data[data['createdAt'].dt.year == year], k)
+        map_year_data[year] = get_top_k_programming_languages(data[data['createdAt'].dt.year == year], k)
 
 
     return map_year_data
 
 
+def remove_zero_pull_requests(data):
+    '''
+    Given a dataframe, it removes the rows with zero pull requests
+    '''
+    return data[data['pullRequests'] != 0]
 
-def get_top_k_programming_languages_per_year(data, k):
+
+def get_top_k_programming_languages(data, k):
     '''
     Given a dataframe, it returns the top k programming languages used in the repositories. with average disk usage.
     returns list of tuples (language, [number of pull requests, disk usage])
@@ -80,9 +81,11 @@ def get_top_k_programming_languages_per_year(data, k):
     # make copy of the dataframe
     data = data.copy()
 
-    # data = preprocess_languages_column(data)
+    # remove rows with zero pull requests
+    data = remove_zero_pull_requests(data)
 
-    language_prs = {}
+    # map each language to its total pull requests and total disk usage
+    language_prs_size = {}
 
     for i in range(len(data)):
         
@@ -94,28 +97,23 @@ def get_top_k_programming_languages_per_year(data, k):
         if len(languages_used) == 0 or len(languages_sizes) != len(languages_used):
             continue
 
-        index = -1
-        for i in range(len(languages_used)):
-            if languages_used[i] == primary_lang:
-                index = i
-                break
-        
-        if index == -1:
+        try:
+            primary_language_index = languages_used.index(primary_lang) 
+        except:
             continue
- 
+
         # get the size of the primary language
-        primary_lang_size = languages_sizes[index]
+        primary_lang_size = languages_sizes[primary_language_index]
 
-        
-        if primary_lang in language_prs:
-            language_prs[primary_lang][0] += prs
-            language_prs[primary_lang][1] += (primary_lang_size / 1024)
+        if primary_lang in language_prs_size:
+            language_prs_size[primary_lang][0] += prs
+            language_prs_size[primary_lang][1] += (primary_lang_size / 1024) # convert to KB
         else:
-            language_prs[primary_lang] = [prs, primary_lang_size]
+            language_prs_size[primary_lang] = [prs, primary_lang_size]
 
-
+    
     # sort the languages by number of pull requests
-    top_languages = sorted(language_prs.items(), key=lambda item: item[1][0], reverse=True)
+    top_languages = sorted(language_prs_size.items(), key=lambda item: item[1][0], reverse=True)
 
     # calculate the average disk usage
     for i in range(min(k, len(top_languages))):
@@ -127,7 +125,6 @@ def get_top_k_programming_languages_per_year(data, k):
     # fill the dataframe with the top k languages
     for i in range(min(k, len(top_languages))):
         top_languages_df.loc[i] = [top_languages[i][0], top_languages[i][1][0], top_languages[i][1][1]]
-
 
     return top_languages_df
 
