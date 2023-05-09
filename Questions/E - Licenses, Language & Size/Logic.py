@@ -112,7 +112,7 @@ def plot_project_size_with_language(df):
     plt.title('Language vs Project Size')
     plt.show()
 
-def get_statistics(df):
+def get_statistics_for_license_with_disk_usage(df):
     # get only rows with diskUsageKb > 30kb
     new_df = df.copy()
     new_df = df[df['diskUsageKb'] > 10000]
@@ -171,6 +171,39 @@ def get_statistics(df):
 
 
 
+def get_statistics_for_language_with_disk_usage(df , language):
+    x_axis = []
+    diskUsages = []
+    index = 0
+    for row in df.itertuples():
+        if row.primaryLanguage == language:
+            x_axis.append(index)
+            diskUsages.append(row.diskUsageKb)
+            index += 1
+
+    plt.figure(figsize=(20, 10))
+    plt.plot(x_axis, diskUsages)
+    plt.xlabel('language seen in the dataset')
+    plt.ylabel('Project Size (KB)')
+    plt.title('language vs Project Size')
+    plt.show()
+
+def get_statistics_for_language_with_licence(df , language):
+    x_axis = []
+    licenses = []
+    index = 0
+    for row in df.itertuples():
+        if row.primaryLanguage == language:
+            x_axis.append(index)
+            licenses.append(row.license)
+            index += 1
+
+    plt.figure(figsize=(20, 10))
+    plt.plot(x_axis, licenses)
+    plt.xlabel('language seen in the dataset')
+    plt.ylabel('License')
+    plt.title('language vs License')
+    plt.show()
 
 
 # def plot_project_size_with_license_with_language(df):
