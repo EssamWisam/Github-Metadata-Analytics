@@ -2,3 +2,5 @@
 DataFiles/dataset.csv
 *.csv
 *.pyc
+__pycache__
+
