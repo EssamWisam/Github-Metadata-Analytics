@@ -1,4 +1,6 @@
 
-DataFiles/dataset.csv
+DataFiles
 *.csv
 *.pyc
+__pycache__
+
