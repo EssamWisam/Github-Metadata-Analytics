@@ -76,7 +76,9 @@ def read_data(kind=None, y_data_col=None, execlude=[], split="train", fix=False,
     # cast forkingAllowed to int
     ds['forkingAllowed'] = ds['forkingAllowed'].astype(int)
     
-    if handle_useless == "obvious":
+    if handle_useless == "all-except-description":
+        ds = ds.drop(['isFork', 'forkingAllowed', 'parent', 'owner', 'name', 'nameWithOwner', 'pushedAt'], axis=1) 
+    elif handle_useless == "obvious":
         # drop useless columns
         ds = ds.drop(['owner', 'name', 'nameWithOwner', 'description', 'pushedAt'], axis=1)         # won't be used
     elif handle_useless == "all" or fix:    
