@@ -4,17 +4,17 @@ def nice_table(dict, title=''):
     '''
     
     html = f'<h2 style="text-align:left;">{title}</h2>'
-    html += '<table style="width:50%; border-collapse: collapse; font-size: 16px; text-align:center; padding: 10px; border: 1px solid #fff;">'
+    html += '<table style="width:50%; border-collapse: collapse; font-size: 16px; text-align:center; padding: 10px; border: 1px solid #fff; white-space: nowrap;">'
     html += '<tr>'
     for key, value in dict.items():
-        html += f'<td style="border: 1px solid #fff; text-align:center; padding: 10px; color: white; border-right: 1px solid #fff;">{key}</td>'
+        html += f'<td style="border: 1px solid #fff; text-align:center; padding: 10px; color: white; border-right: 1px solid #fff; white-space: nowrap;">{key}</td>'
     html += '</tr>'
-    
     
     for i in range(max([len(value) for value in dict.values()])):
         html += '<tr>'
         for key, value in dict.items():
-            html += f'<td style="border: 1px solid #fff; text-align:center; padding: 10px; color: white; opacity: 0.8; border-left: 1px solid #fff;">{value[i]}</td>'
+            # make width of cell fit the value
+            html += f'<td style="border: 1px solid #fff; text-align:center; padding: 10px; color: white; opacity: 0.8; border-left: 1px solid #fff; white-space: nowrap;">{value[i]}</td>'
         html += '</tr>'
             
     return html

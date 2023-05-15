@@ -151,7 +151,7 @@ def handle_languages_column(x_data):
 
 
 
-def get_date_features(x_data_d, date_col):
+def get_date_features(x_data_d, date_col, merge=False):
     '''
     This looks for the 'createdAt' column and breaks it into hour, day_of_week, day_of_year, month, quarter and year
     in a new dataframe.
@@ -165,6 +165,10 @@ def get_date_features(x_data_d, date_col):
     cols['month'] = col.dt.month
     cols['quarter'] = col.dt.quarter
     cols['year'] = col.dt.year
+    
+    if merge:
+        x_data_d = pd.concat([x_data_d, cols], axis=1)
+        return x_data_d
     
     return cols
 

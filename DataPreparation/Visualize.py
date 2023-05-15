@@ -70,7 +70,7 @@ def plot_feature_histograms(x_data, sample_size):
     num_cols = 4
 
     # increase dpi
-    plt.rcParams['figure.dpi'] = 100        # increase plot resolution
+    plt.rcParams['figure.dpi'] = 300        # increase plot resolution
     plt.style.use('dark_background')
     # make the figure
     fig, axes = plt.subplots(num_rows, num_cols, figsize=(20, 20))
@@ -85,6 +85,9 @@ def plot_feature_histograms(x_data, sample_size):
         axes[row, col].set_title(feat)
         axes[row, col].set_xlabel(feat)
         axes[row, col].set_ylabel('Frequency')
+        # add hspace
+        fig.subplots_adjust(hspace=0.5)
+    
     
     # remove remaining plots
     for i in range(len(x_data.columns), num_rows * num_cols):
@@ -147,7 +150,8 @@ def visualize_continuous_data(x_data, sample_size=10000):
     num_cols = 4
      
     # plot each combination of 2 features the grid
-    fig, axes = plt.subplots(num_rows, num_cols, figsize=(20, 50))
+    plt.rcParams['figure.dpi'] = 300        # increase plot resolution
+    fig, axes = plt.subplots(num_rows, num_cols, figsize=(20, 60))
     for i, (feat1, feat2) in tqdm(enumerate(combinations)):
         # get the row and column index
         row, col = i // num_cols, i % num_cols
@@ -156,6 +160,8 @@ def visualize_continuous_data(x_data, sample_size=10000):
         axes[row, col].set_xlabel(feat1)
         axes[row, col].set_ylabel(feat2)
         axes[row, col].set_title(feat1 + " vs " + feat2)
+        fig.subplots_adjust(hspace=0.8)
+        
     
     # remove remaining plots
     for i in range(len(combinations), num_rows * num_cols):
