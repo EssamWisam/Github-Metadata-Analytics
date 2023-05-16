@@ -52,6 +52,7 @@ def read_data(kind=None, y_data_col=None, execlude=[], split="train", fix=False,
     
     if split == "train":    path = os.path.join(module_dir, '../DataFiles/train.csv')
     elif split == "val":    path = os.path.join(module_dir, '../DataFiles/val.csv')
+    elif split == "train-val":    path = os.path.join(module_dir, '../DataFiles/train-val.csv')
     elif split == "test":   path = os.path.join(module_dir, '../DataFiles/test.csv')
     elif split == "all":   path = os.path.join(module_dir, '../DataFiles/dataset.csv')
     

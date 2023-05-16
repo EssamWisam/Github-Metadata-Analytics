@@ -97,6 +97,8 @@ def scatter_plots(splits, top_langs):
         splits_s[lang] = splits[lang].sample(frac=0.1)
 
     # Make 3 2D scatter plots for each two pairs of columns
+    plt.rcParams['figure.dpi'] = 300
+    plt.style.use('dark_background')
     fig, axes = plt.subplots(1, 3, figsize=(25, 6))
     for i, lang in enumerate(top_langs):
         axes[0].scatter(splits_s[lang]["stars"], splits_s[lang]["defaultBranchCommitCount"], color=colors[i], s=4.9)
