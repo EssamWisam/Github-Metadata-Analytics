@@ -1,0 +1,378 @@
+	primaryLanguage
+JavaScript	32684
+Python	32295
+-1	15982
+Java	14489
+C++	10835
+TypeScript	8335
+PHP	8246
+C	8017
+C#	7820
+HTML	6732
+Go	6723
+Shell	6021
+Jupyter Notebook	5718
+Ruby	4732
+Objective-C	3241
+CSS	3157
+Rust	2895
+Swift	2853
+Kotlin	2053
+Dart	1918
+R	1737
+Vue	1536
+Lua	1462
+MATLAB	1211
+Scala	1036
+Haskell	806
+TeX	800
+Perl	769
+PowerShell	765
+Vim Script	715
+Clojure	705
+Dockerfile	664
+Emacs Lisp	569
+Makefile	551
+Elixir	532
+CoffeeScript	511
+Julia	504
+Assembly	434
+HCL	407
+SCSS	362
+Pascal	353
+Erlang	324
+OCaml	324
+Solidity	269
+Groovy	264
+Batchfile	231
+Common Lisp	226
+Arduino	224
+Verilog	205
+GDScript	197
+F#	192
+CMake	185
+Fortran	177
+Haxe	165
+Nim	156
+ActionScript	156
+Elm	146
+Nix	134
+Svelte	126
+VHDL	119
+Crystal	109
+Jinja	102
+Scheme	101
+Racket	99
+D	96
+QML	93
+TSQL	92
+Cuda	91
+GLSL	89
+AutoHotkey	87
+Smarty	86
+ShaderLab	83
+Processing	82
+PureScript	79
+Roff	78
+Visual Basic	75
+Objective-C++	75
+XSLT	73
+SourcePawn	72
+PLpgSQL	72
+Mathematica	69
+Tcl	68
+OpenSCAD	67
+Eagle	65
+Zig	64
+SystemVerilog	61
+Coq	61
+Apex	56
+Rich Text Format	56
+Vala	55
+Puppet	53
+Smalltalk	53
+Logos	50
+ASL	44
+AppleScript	42
+Prolog	41
+Mustache	40
+Max	40
+Less	39
+Visual Basic .NET	39
+Blade	38
+KiCad Layout	38
+1C Enterprise	37
+HLSL	37
+PostScript	35
+EJS	35
+PLSQL	35
+VBA	32
+ColdFusion	31
+Game Maker Language	30
+Standard ML	29
+Starlark	29
+V	28
+Hack	28
+ReScript	28
+ASP	28
+Agda	27
+WebAssembly	27
+Handlebars	26
+AutoIt	26
+Ada	25
+SaltStack	25
+Astro	25
+SuperCollider	25
+G-code	24
+Raku	24
+Liquid	24
+Reason	24
+Yacc	23
+Idris	22
+ABAP	21
+FreeMarker	21
+Nunjucks	21
+Pawn	20
+OpenEdge ABL	20
+Markdown	20
+Nginx	20
+Cython	18
+Nextflow	18
+BitBake	17
+XQuery	17
+Inno Setup	17
+Stata	17
+Awk	16
+SQF	16
+Twig	16
+mcfunction	16
+Stylus	16
+Pug	15
+Lean	15
+Protocol Buffer	15
+IDL	14
+Bicep	14
+ANTLR	14
+LiveScript	14
+Forth	14
+Jsonnet	14
+nesC	13
+Smali	13
+ApacheConf	13
+Gherkin	13
+M4	13
+Groff	13
+LabVIEW	12
+GAP	11
+LLVM	11
+YARA	11
+SWIG	11
+COBOL	11
+AGS Script	11
+Perl 6	10
+Objective-J	10
+TLA	10
+Sass	10
+PureBasic	10
+Modelica	10
+DIGITAL Command Language	9
+SAS	9
+Cairo	9
+Pure Data	9
+Ren'Py	9
+NSIS	8
+Vim Snippet	8
+Papyrus	8
+xBase	8
+SQLPL	8
+CartoCSS	8
+q	8
+DTrace	7
+Hy	7
+M	7
+Lex	7
+Squirrel	7
+APL	7
+Component Pascal	7
+AMPL	7
+MQL5	7
+ASP.NET	7
+XML	7
+Gosu	7
+Ceylon	7
+Brainfuck	6
+Move	6
+Xojo	6
+SQL	6
+Zeek	6
+BASIC	6
+Dhall	6
+Lasso	6
+VBScript	6
+Bikeshed	6
+RobotFramework	6
+Motoko	6
+DM	6
+LSL	5
+QMake	5
+Open Policy Agent	5
+Faust	5
+REXX	5
+AL	5
+FreeBasic	5
+KakouneScript	5
+Eiffel	5
+Classic ASP	5
+YAML	5
+Odin	5
+Common Workflow Language	5
+RPC	5
+sed	5
+DCPU-16 ASM	5
+JetBrains MPS	5
+Gnuplot	5
+Gleam	5
+Xtend	5
+ZIL	5
+Brightscript	4
+Io	4
+Sage	4
+Rascal	4
+Rebol	4
+Metal	4
+Monkey C	4
+Inform 7	4
+Thrift	4
+ZenScript	4
+Beef	4
+MAXScript	4
+Red	4
+VCL	4
+Scilab	4
+ImageJ Macro	4
+LilyPond	4
+CodeQL	4
+Nasal	4
+ATS	4
+EmberScript	4
+MoonScript	4
+Frege	3
+LookML	3
+UnrealScript	3
+Clean	3
+MQL4	3
+LOLCODE	3
+Cirru	3
+Propeller Spin	3
+PicoLisp	3
+GAMS	3
+POV-Ray SDL	3
+Pep8	3
+Cadence	3
+Mercury	3
+Limbo	3
+ooc	3
+NetLogo	3
+Web Ontology Language	3
+ObjectScript	3
+Isabelle	3
+Arc	3
+API Blueprint	3
+GCC Machine Description	3
+wdl	3
+Visual Basic 6.0	3
+ZAP	3
+Fennel	3
+Futhark	2
+Mask	2
+Ballerina	2
+HyPhy	2
+Bluespec	2
+CUE	2
+Grammatical Framework	2
+Graphviz (DOT)	2
+Csound Document	2
+P4	2
+RAML	2
+mIRC Script	2
+NewLisp	2
+Slash	2
+Nemerle	2
+Mako	2
+NetLinx	2
+Shen	2
+Q#	2
+Meson	2
+SMT	2
+BlitzBasic	2
+BlitzMax	2
+jq	2
+GSC	2
+RouterOS Script	2
+Adblock Filter List	2
+Bro	2
+MLIR	2
+Parrot	2
+Pony	2
+XC	2
+JSON	2
+LigoLANG	2
+Latte	2
+Fancy	1
+Nit	1
+Mirah	1
+wisp	1
+StringTemplate	1
+Csound	1
+SVG	1
+Euphoria	1
+Kit	1
+Alloy	1
+Janet	1
+REALbasic	1
+Dogescript	1
+Boo	1
+DataWeave	1
+GDB	1
+Kaitai Struct	1
+Terra	1
+ChucK	1
+AngelScript	1
+4D	1
+HolyC	1
+PlantUML	1
+Smithy	1
+Modula-2	1
+hoon	1
+Ragel	1
+Jasmin	1
+Vyper	1
+Fluent	1
+Monkey	1
+Fantom	1
+kvlang	1
+F*	1
+Slice	1
+SmPL	1
+Stan	1
+NCL	1
+PigLatin	1
+Opa	1
+AIDL	1
+PEG.js	1
+LFE	1
+JSONiq	1
+NASL	1
+RenderScript	1
+Haml	1
+Factor	1
+NWScript	1
+XS	1
+Ink	1
+J	1
+Dafny	1
+SRecode Template	1
+RPGLE	1
+IGOR Pro	1
+XProc	1
+Tea	1

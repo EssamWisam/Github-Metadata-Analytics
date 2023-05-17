@@ -52,6 +52,7 @@ def read_data(kind=None, y_data_col=None, execlude=[], split="train", fix=False,
     
     if split == "train":    path = os.path.join(module_dir, '../DataFiles/train.csv')
     elif split == "val":    path = os.path.join(module_dir, '../DataFiles/val.csv')
+    elif split == "train-val":    path = os.path.join(module_dir, '../DataFiles/train-val.csv')
     elif split == "test":   path = os.path.join(module_dir, '../DataFiles/test.csv')
     elif split == "all":   path = os.path.join(module_dir, '../DataFiles/dataset.csv')
     
@@ -151,7 +152,7 @@ def handle_languages_column(x_data):
 
 
 
-def get_date_features(x_data_d, date_col):
+def get_date_features(x_data_d, date_col, merge=False):
     '''
     This looks for the 'createdAt' column and breaks it into hour, day_of_week, day_of_year, month, quarter and year
     in a new dataframe.
@@ -165,6 +166,10 @@ def get_date_features(x_data_d, date_col):
     cols['month'] = col.dt.month
     cols['quarter'] = col.dt.quarter
     cols['year'] = col.dt.year
+    
+    if merge:
+        x_data_d = pd.concat([x_data_d, cols], axis=1)
+        return x_data_d
     
     return cols
 

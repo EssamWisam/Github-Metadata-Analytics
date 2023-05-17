@@ -107,7 +107,7 @@ def top_10_licenses(x_data_d):
     fig, ax = plt.subplots(figsize=(10, 5))
     # add counts to the bars
     for i, v in enumerate(top_10_licenses.values):
-        ax.text(i-0.25, v+0.5, str(round(v/total_num_licenses,2)), color='white', fontweight='bold')
+        ax.text(i-0.25, v+1.5, str(round(v/total_num_licenses,2)), color='white', fontweight='bold')
         
     fig.suptitle('Top 10 Licenses', fontsize=16)
     ax.bar(top_10_licenses.index, top_10_licenses.values, color='aqua')
