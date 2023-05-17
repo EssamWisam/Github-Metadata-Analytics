@@ -293,3 +293,18 @@ def plot_project_size_with_license_with_language_3D(df):
     ax.set_xticklabels(le.inverse_transform(ax.get_xticks()).tolist())
     ax.set_yticklabels(le.inverse_transform(ax.get_yticks()).tolist())
     plt.show()
+
+
+def Plot_Correlation(df):
+    df = df.copy()
+    # get only diskUsageKb , primaryLanguage , license
+    columns = ['diskUsageKb' , 'primaryLanguage' , 'license']
+    df = df[columns]
+    df['primaryLanguage'] = df['primaryLanguage'].astype('category').cat.codes
+    df['license'] = df['license'].astype('category').cat.codes
+    print(df.head())
+    corr = df.corr()
+    print(corr)
+    plt.figure(figsize=(20, 10))
+    sns.heatmap(corr, annot=True, cmap='coolwarm')
+    plt.show()
