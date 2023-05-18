@@ -216,7 +216,7 @@ def show_backend_databases_heatmap(ds):
     ax.set_title('Frequency of occurrence for no-sql and back-end frameworks')
     ax.set_xlabel('Back-end frameworks')
     ax.set_ylabel('No-sql databases')
-
+    plt.style.use('dark_background')
     # Show the plot
     plt.show()
 
@@ -240,6 +240,7 @@ def explore_technology(ds, technology, title, top_n):
     plt.title(title)
     plt.pie(sizes[:top_n], labels = labels[:top_n], autopct='%1.1f%%', startangle=140)
     plt.axis('equal')
+    plt.style.use('dark_background')
     plt.show()
 
 
@@ -253,8 +254,8 @@ def show_histogram(data):
 
     def plot_single_figure(title, labels, counts, ax):
         ax.set_facecolor('black')  # set background color to black
-        ax.bar(labels, counts, color='blue')  # set bar color to blue
-        ax.set_title(title, color='white')
+        ax.bar(labels, counts)  # set bar color to blue
+        ax.set_title(title)
         ax.set_xticklabels(labels, rotation=90, color='white')
         ax.tick_params(axis='y', colors='white')  # set y-axis label color to white
 
@@ -263,7 +264,7 @@ def show_histogram(data):
         counts = list(data[title].values())
         plot_single_figure(title, labels, counts, axs[i])
 
-    fig.set_facecolor('black') 
+    plt.style.use('dark_background')
     plt.tight_layout()
     plt.show()
 

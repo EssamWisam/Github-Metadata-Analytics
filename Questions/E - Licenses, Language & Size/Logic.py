@@ -162,7 +162,9 @@ def get_statistics_for_license_with_disk_usage(df):
         x_axis.append(i)
         percentages.append(percentage)
 
-    plt.figure(figsize=(20, 10))
+    plt.figure(figsize=(15, 7))
+    plt.gca().spines['top'].set_visible(False)
+    plt.gca().spines['right'].set_visible(False)
     plt.plot(x_axis, percentages)
     plt.xlabel('Project Size (KB)')
     plt.ylabel('Percentage of repositories with license')
@@ -175,13 +177,17 @@ def get_statistics_for_language_with_disk_usage(df , language):
     x_axis = []
     diskUsages = []
     index = 0
+    # remove top and right spines
+    
     for row in df.itertuples():
         if row.primaryLanguage == language:
             x_axis.append(index)
             diskUsages.append(row.diskUsageKb)
             index += 1
 
-    plt.figure(figsize=(20, 10))
+    plt.figure(figsize=(15, 7))
+    plt.gca().spines['top'].set_visible(False)
+    plt.gca().spines['right'].set_visible(False)
     plt.plot(x_axis, diskUsages)
     plt.xlabel('language seen in the dataset')
     plt.ylabel('Project Size (KB)')
@@ -198,7 +204,9 @@ def get_statistics_for_language_with_licence(df , language):
             licenses.append(row.license)
             index += 1
 
-    plt.figure(figsize=(20, 10))
+    plt.figure(figsize=(15, 7))
+    plt.gca().spines['top'].set_visible(False)
+    plt.gca().spines['right'].set_visible(False)
     plt.plot(x_axis, licenses)
     plt.xlabel('language seen in the dataset')
     plt.ylabel('License')
@@ -292,4 +300,21 @@ def plot_project_size_with_license_with_language_3D(df):
     ax.set_zlabel('Project Size (MB)')
     ax.set_xticklabels(le.inverse_transform(ax.get_xticks()).tolist())
     ax.set_yticklabels(le.inverse_transform(ax.get_yticks()).tolist())
+    plt.show()
+
+
+def Plot_Correlation(df):
+    df = df.copy()
+    # get only diskUsageKb , primaryLanguage , license
+    columns = ['diskUsageKb' , 'primaryLanguage' , 'license']
+    df = df[columns]
+    df['primaryLanguage'] = df['primaryLanguage'].astype('category').cat.codes
+    df['license'] = df['license'].astype('category').cat.codes
+    print(df.head())
+    corr = df.corr()
+    print(corr)
+    plt.style.use('dark_background')
+    plt.figure(figsize=(10, 5))
+    sns.heatmap(corr, annot=True, cmap='coolwarm')
+    plt.title('Correlation Matrix between Disk Usage, Primary Language, and License')
     plt.show()
