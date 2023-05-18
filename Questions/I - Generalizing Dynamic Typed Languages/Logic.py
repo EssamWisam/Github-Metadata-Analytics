@@ -19,6 +19,7 @@ def preprocess_dataset(ds):
 
     # make the createdAt column contains only the year
     new_ds['year'] = new_ds['createdAt'].apply(lambda x: x.year)
+    new_ds['month'] = new_ds['createdAt'].apply(lambda x: x.month)
 
     # drop createdAt column
     new_ds = new_ds.drop('createdAt', axis=1)
@@ -137,7 +138,7 @@ def show_pie(labels, freqs, title, show=True):
     '''
     freqs = freqs[:6]
     labels = labels[:6]
-    # plt.rcParams['figure.figsize'] = [20, 10]
+    plt.rcParams['figure.figsize'] = [20, 10]
     plt.rcParams['figure.dpi'] = 100
     plt.style.use('dark_background')
     plt.pie(freqs, labels=labels, autopct='%1.1f%%', textprops={'fontsize': 14, 'color': 'white'})
@@ -165,6 +166,29 @@ def split_dataset_across_years(ds):
 
     return dynamic_datasets, static_datasets
 
+def split_dataset_across_years_months(ds):
+    '''
+    Input: dataset
+    Output: two lists of datasets, one list for dynamic languages and the other for static languages
+    and each list contains datasets for each year
+    '''
+    dynamic_datasets = {}
+    static_datasets = {}
+
+    # get years present in the dataset
+    years = ds['year'].unique()
+
+    # split the dataset into two datasets, one for dynamic languages and the other for static languages
+    for year in years:
+        dynamic_datasets[year] = {}
+        static_datasets[year] = {}
+        for month in range(1, 13):
+            dynamic_datasets[year][month] = ds[(ds['year'] == year) & (ds['month'] == month) & (ds['primaryLanguage'].isin(dynamic_languages))]
+            static_datasets[year][month] = ds[(ds['year'] == year) & (ds['month'] == month) & (ds['primaryLanguage'].isin(static_languages))]
+
+    return dynamic_datasets, static_datasets
+
+
 def show_pie_chart_for_each_year(dynamic_datasets, static_datasets):
     '''
         show pie chart for each year to show the usage of dynamic and static languages 
@@ -174,6 +198,7 @@ def show_pie_chart_for_each_year(dynamic_datasets, static_datasets):
     years = list(set(dynamic_datasets.keys()) | set(static_datasets.keys()))
     years.sort()
     years = years[-9:]
+    plt.rcParams['figure.figsize'] = [20, 10]
     for i, year in enumerate(years):
 
         plt.subplot(3, 3, i+1)
