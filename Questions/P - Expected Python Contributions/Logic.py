@@ -31,8 +31,8 @@ def preprocess_data(df):
     # df.drop('createdAt', axis = 1, inplace = True)
 
     df = df[df['year'] != 2023]
-    df = df[df['year'] != 2022]
-    df = df[df['year'] != 2021]
+    # df = df[df['year'] != 2022]
+    # df = df[df['year'] != 2021]
 
 
     return df
@@ -75,9 +75,18 @@ def explore_data(df):
 
 
 def plot_data(df):  
+    plt.figure(figsize=(15, 5))
+    plt.style.use('dark_background')
+    # remove top and right spines
+    # plt.gca().spines['top'].set_visible(False)
+    # plt.gca().spines['right'].set_visible(False)
     df.plot(style='.' , figsize=(15, 5) , color = color_pal[0], title='Number of Pull Requests over time') 
 
 def draw_bar_plot(pullReqs, date):
+    plt.style.use('dark_background')
+    # remove top and right spines
+    plt.gca().spines['top'].set_visible(False)
+    plt.gca().spines['right'].set_visible(False)
     plt.bar(date, pullReqs)
     plt.xlabel('Date')
     plt.ylabel('Number of Pull Requests')
@@ -87,10 +96,10 @@ def draw_bar_plot(pullReqs, date):
     plt.show()
 
 def split_data(df):
-    # train = df.loc[df.index <= '2021-12-01']
-    # test = df.loc[df.index > '2021-12-01']
-    train = df.loc[df.index <= '2019-12-01']
-    test = df.loc[df.index > '2019-12-01']
+    train = df.loc[df.index <= '2021-12-01']
+    test = df.loc[df.index > '2021-12-01']
+    # train = df.loc[df.index <= '2019-12-01']
+    # test = df.loc[df.index > '2019-12-01']
     return train, test
 
 
@@ -101,11 +110,16 @@ def create_features(df):
     return df
 
 def plot_train_test(train , test):
+
     fig , ax = plt.subplots(figsize=(15, 5))
+    plt.style.use('dark_background')
+    # remove top and right spines
+    plt.gca().spines['top'].set_visible(False)
+    plt.gca().spines['right'].set_visible(False)
     train.plot(ax=ax , style='.' , color=color_pal[0] , label = 'trainig data')  
     test.plot(ax=ax , style='.' , color=color_pal[1] , label = 'test data')
-    # ax.axvline('2021-12-01' , linestyle='--' , color='black' , label='train test split')
-    ax.axvline('2019-12-01' , linestyle='--' , color='black' , label='train test split')
+    ax.axvline('2021-12-01' , linestyle='--' , color='black' , label='train test split')
+    # ax.axvline('2019-12-01' , linestyle='--' , color='black' , label='train test split')
     ax.legend(['train' , 'test' , 'train test split'])
     ax.set_title('Number of Pull Requests over time')
     plt.show()

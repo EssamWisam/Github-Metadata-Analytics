@@ -7,7 +7,21 @@ def explore_primary_languages(ds):
     # get the unique languages
     unique_langs = ds['primaryLanguage'].unique()
 
+    counts = ds['primaryLanguage'].value_counts()
 
+   
+    print('Number of available languages: ', len(unique_langs))
+    print("")
+    # get the top_n languages
+    top_langs = counts.iloc[:10]
+    print('Sample languages: ')
+
+    # print random 5 languages from the top_n languages
+    print(top_langs.sample(5))
+    print("")
+
+    #print(top_langs)
+    
 
     return unique_langs
 
@@ -53,6 +67,10 @@ def get_margins(ds):
 import matplotlib.pyplot as plt
 def plot_top_n_languages(ds, top_n , top_langs , year = None):
     # make bar plot for the top_n languages
+    plt.style.use('dark_background')
+    # remove top and right spines
+    plt.gca().spines['top'].set_visible(False)
+    plt.gca().spines['right'].set_visible(False)
     plt.bar(top_langs['language'], top_langs['count'])
     plt.xlabel('Language')
     plt.ylabel('Count')
