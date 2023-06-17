@@ -212,11 +212,12 @@ What fraction of those with licenses also have a code of conduct?
 
 #### The Available Licenses
 
-![image]()
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605256-48382d8d-365e-4d03-922d-4c31d31dda81.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135651Z&X-Amz-Expires=300&X-Amz-Signature=9ab9eb63c2a6ac0a68dff431d8dbbb84bb872db7a8fbb06d6eb048d741ee9747&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
+
 
 #### Top 10 Licenses
 
-![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605256-48382d8d-365e-4d03-922d-4c31d31dda81.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135651Z&X-Amz-Expires=300&X-Amz-Signature=9ab9eb63c2a6ac0a68dff431d8dbbb84bb872db7a8fbb06d6eb048d741ee9747&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246615468-fffe6cda-077d-476a-a4a0-f9fc6cdf06b5.png)
 
 ### 🗿 Model Building
 ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605306-1d967188-9ed9-4f07-af55-92cb9c758268.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135709Z&X-Amz-Expires=300&X-Amz-Signature=342d15d22a24a0e6dc38f28e76c66f2d5342dcc27be88ea786a48d338b3eb133&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
