@@ -1,4 +1,4 @@
-#  <img src="https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/1f008b11-bdcd-4a49-8611-13a9f269cdc0" alt="Twitter" width="30px" height="30px"/> Github Metadata Analytics 
+#  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246601146-1f008b11-bdcd-4a49-8611-13a9f269cdc0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135452Z&X-Amz-Expires=300&X-Amz-Signature=a9f4a90372956f216ba7c19ef603286b78ed292d3988e83298998a75ce8ca818&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685" alt="Twitter" width="30px" height="30px"/> Github Metadata Analytics 
 <p align='justify'>
 Choosing a technology or programming language is still one of the hardest decisions that have to be made internally in software engineering firms. In this school project, we consider a data science approach to distinguish different languages by considering features such as success, collaboration, activity, endangerment, FOSS, etc. as measured by variables such as stars, pull requests, commits, archrivals, licenses.
 </p>
@@ -133,7 +133,7 @@ We have set the following set of working [standards](https://github.com/EssamWis
 ## 🚀 Pipeline
 
 <div align="center">
-<img width="731" alt="image" src="https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/b3ac18c6-1a30-410d-9206-593168add1d6">
+<img width="731" alt="image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246603177-b3ac18c6-1a30-410d-9206-593168add1d6.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135554Z&X-Amz-Expires=300&X-Amz-Signature=a199b312eefba090dffea18cf0fe3e538022bbddfb0cb3e556da3ccb90df8f06&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685">
 </div>
 
 We harnessed the data science cycle for each of the questions. This includes an epicycle that applies in each stage. As in the standards, each notebook corresponding to a question was structured into the 5 stages of the cycle. We also logged our iterations for the epicycle in each stage using a table under that stage in the notebook.
@@ -196,7 +196,7 @@ Our data preparation module was used for all questions and supported the followi
 
 After using domain knowledge to handle missing values and using multiple imputation with stochastic gradient descent, we obtain the following violin plots
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/f987c3bf-aabd-437d-afb7-1ceb6654dcf1)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246604792-f987c3bf-aabd-437d-afb7-1ceb6654dcf1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T140042Z&X-Amz-Expires=300&X-Amz-Signature=eb944bb55081416cc846dd0d13253dcc814fbaf09e326023e77391dabe3e2b8f&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 Myriad of other plots, statistics, insights for each and epicycle logging are present in the [demonstration notebook](https://github.com/EssamWisam/Github-Metadata-Analytics/blob/main/DataPreparation/DataPreperation.ipynb) which like all Github, should be viewed in dark mode.
 
@@ -212,14 +212,14 @@ What fraction of those with licenses also have a code of conduct?
 
 #### The Available Licenses
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/48382d8d-365e-4d03-922d-4c31d31dda81)
+![image]()
 
 #### Top 10 Licenses
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/5196ee0c-8684-4ccb-8884-7418f7a5d27d)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605256-48382d8d-365e-4d03-922d-4c31d31dda81.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135651Z&X-Amz-Expires=300&X-Amz-Signature=9ab9eb63c2a6ac0a68dff431d8dbbb84bb872db7a8fbb06d6eb048d741ee9747&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 ### 🗿 Model Building
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/1d967188-9ed9-4f07-af55-92cb9c758268)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605306-1d967188-9ed9-4f07-af55-92cb9c758268.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135709Z&X-Amz-Expires=300&X-Amz-Signature=342d15d22a24a0e6dc38f28e76c66f2d5342dcc27be88ea786a48d338b3eb133&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 ### 💡 Result Interpretation & Communicating Results
 
@@ -260,15 +260,15 @@ What fraction of those with licenses also have a code of conduct?
 
 #### There seems to be no precise distinctive association
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/f7c00501-6b8b-4d1e-92d0-a92a54bdf506)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605768-f7c00501-6b8b-4d1e-92d0-a92a54bdf506.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T140021Z&X-Amz-Expires=300&X-Amz-Signature=16ec801e92cd3bc6a13f05e0342420afe9009722174506d0a8c5a83a7812c63b&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 #### Not even from a distribution prespective
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/1084d816-7a1e-402a-bba8-07707a65f60f)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605801-1084d816-7a1e-402a-bba8-07707a65f60f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T140008Z&X-Amz-Expires=300&X-Amz-Signature=84fa895a1e0288942cca3655501e5c58464d9ac478e5bbffc703cf1e893c5c55&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 #### Let's rather look for a high-level association
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/aedeab0f-2f36-4f61-852e-86dbb3deb716)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605841-aedeab0f-2f36-4f61-852e-86dbb3deb716.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135957Z&X-Amz-Expires=300&X-Amz-Signature=27154a50ca3d47f23d7a69a8c93896bb3feae426c7b445200ba45170abfee9a3&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 
 ### 🗿 Model Building
@@ -281,7 +281,7 @@ II. TypeScript can be regarded as the most active language
 III. C can be regarded as the least collaborative language
 
 #### Check whether CLT holds before proceeding with hypothesis testing
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/66f9aa35-604f-4e6f-b5ba-426b0ec59ef5)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605967-66f9aa35-604f-4e6f-b5ba-426b0ec59ef5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135945Z&X-Amz-Expires=300&X-Amz-Signature=10816843c0fe48c99991e86998192c4d0d16c0817011206f5131145a8472b705&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 #### Test Claim I
 
@@ -346,11 +346,11 @@ What programming language is expected to have the most repos archived in 2023?
 
 #### Archival Rate for Most Archived Language Every Year
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/33334562-e533-40b1-9253-ac7068367ce5)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246607928-33334562-e533-40b1-9253-ac7068367ce5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135919Z&X-Amz-Expires=300&X-Amz-Signature=e635d72001b4426865c704a8a7d57019bb090846108c2f2f91dada6f77c2732a&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 #### Monthly Arhivals for C
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/1fa9a980-34c7-4250-9c93-95f8e88f42e2)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246607974-1fa9a980-34c7-4250-9c93-95f8e88f42e2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135908Z&X-Amz-Expires=300&X-Amz-Signature=7a04b1e1d4b655950b95ccd4609330c37c3831df890a8e77a665c8e7bec45054&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 Does not seem to be leaving us soon.
 
@@ -358,11 +358,11 @@ Does not seem to be leaving us soon.
 
 #### Training a Time-series Forecasting Model per Language 
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/af16876e-7b8c-4dea-a324-a64d2f87149b)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246608044-af16876e-7b8c-4dea-a324-a64d2f87149b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135856Z&X-Amz-Expires=300&X-Amz-Signature=d0dacd3212d17ce5f4722b58416c48b594b9e8bb5dc34c844d4c1480333feab5&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 #### Predicting for 2023 for each Language
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/ce69da0e-8fcc-4eff-826f-c0d0e6706ab0)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246608054-ce69da0e-8fcc-4eff-826f-c0d0e6706ab0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135845Z&X-Amz-Expires=300&X-Amz-Signature=b855546045f12e492548b2ec41045eca0dd2c742962cd508ccaff332e7687302&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 
 ### 💡 Result Interpretation & Communicating Results
@@ -380,14 +380,21 @@ Does not seem to be leaving us soon.
 
 ## 📊 Some Dashboards
 
-![Dashboard 1 (1)](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/ce72feee-0a9c-426a-aceb-0f92b4becc5d)
+![Dashboard 1 (1)](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246608574-ce72feee-0a9c-426a-aceb-0f92b4becc5d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135821Z&X-Amz-Expires=300&X-Amz-Signature=0d23ba6dd86577ca2f18e82e466a2efd250b1c39c8fe87fade831a589bf26ef4&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
-<img width="1093" alt="image" src="https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/25ba0ee6-caec-44da-a0c1-50e32380062c">
+<img width="1093" alt="image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246608724-25ba0ee6-caec-44da-a0c1-50e32380062c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135804Z&X-Amz-Expires=300&X-Amz-Signature=e2383f1838dd73ab92112476876a8fabde34b2dcc2693c0f42213d3ef28d936e&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685">
 
 ## 👥 Collaborators
 <!-- readme: contributors -start -->
 <table>
 <tr>
+    <td align="center">
+        <a href="https://github.com/EssamWisam">
+            <img src="https://avatars.githubusercontent.com/u/49572294?v=4" width="100;" alt="EssamWisam"/>
+            <br />
+            <sub><b>Essam</b></sub>
+        </a>
+    </td>
     <td align="center">
         <a href="https://github.com/Mohammed-Salama">
             <img src="https://avatars.githubusercontent.com/u/62220722?v=4" width="100;" alt="Mohammed-Salama"/>
@@ -400,13 +407,6 @@ Does not seem to be leaving us soon.
             <img src="https://avatars.githubusercontent.com/u/62077516?v=4" width="100;" alt="Ahmed-walid"/>
             <br />
             <sub><b>Ahmed Waleed</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/EssamWisam">
-            <img src="https://avatars.githubusercontent.com/u/49572294?v=4" width="100;" alt="EssamWisam"/>
-            <br />
-            <sub><b>Essam</b></sub>
         </a>
     </td>
     <td align="center">
