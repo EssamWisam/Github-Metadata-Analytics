@@ -1,4 +1,4 @@
-#  <img src="https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/1f008b11-bdcd-4a49-8611-13a9f269cdc0" alt="Twitter" width="30px" height="30px"/> Github Metadata Analytics 
+#  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246601146-1f008b11-bdcd-4a49-8611-13a9f269cdc0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135452Z&X-Amz-Expires=300&X-Amz-Signature=a9f4a90372956f216ba7c19ef603286b78ed292d3988e83298998a75ce8ca818&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685" alt="Twitter" width="30px" height="30px"/> Github Metadata Analytics 
 <p align='justify'>
 Choosing a technology or programming language is still one of the hardest decisions that have to be made internally in software engineering firms. In this school project, we consider a data science approach to distinguish different languages by considering features such as success, collaboration, activity, endangerment, FOSS, etc. as measured by variables such as stars, pull requests, commits, archrivals, licenses.
 </p>
@@ -133,7 +133,7 @@ We have set the following set of working [standards](https://github.com/EssamWis
 ## 🚀 Pipeline
 
 <div align="center">
-<img width="731" alt="image" src="https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/b3ac18c6-1a30-410d-9206-593168add1d6">
+<img width="731" alt="image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246603177-b3ac18c6-1a30-410d-9206-593168add1d6.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135554Z&X-Amz-Expires=300&X-Amz-Signature=a199b312eefba090dffea18cf0fe3e538022bbddfb0cb3e556da3ccb90df8f06&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685">
 </div>
 
 We harnessed the data science cycle for each of the questions. This includes an epicycle that applies in each stage. As in the standards, each notebook corresponding to a question was structured into the 5 stages of the cycle. We also logged our iterations for the epicycle in each stage using a table under that stage in the notebook.
@@ -212,14 +212,14 @@ What fraction of those with licenses also have a code of conduct?
 
 #### The Available Licenses
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/48382d8d-365e-4d03-922d-4c31d31dda81)
+![image]()
 
 #### Top 10 Licenses
 
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/5196ee0c-8684-4ccb-8884-7418f7a5d27d)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605256-48382d8d-365e-4d03-922d-4c31d31dda81.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135651Z&X-Amz-Expires=300&X-Amz-Signature=9ab9eb63c2a6ac0a68dff431d8dbbb84bb872db7a8fbb06d6eb048d741ee9747&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 ### 🗿 Model Building
-![image](https://github.com/EssamWisam/Github-Metadata-Analytics/assets/49572294/1d967188-9ed9-4f07-af55-92cb9c758268)
+![image](https://github-production-user-asset-6210df.s3.amazonaws.com/49572294/246605306-1d967188-9ed9-4f07-af55-92cb9c758268.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230617T135709Z&X-Amz-Expires=300&X-Amz-Signature=342d15d22a24a0e6dc38f28e76c66f2d5342dcc27be88ea786a48d338b3eb133&X-Amz-SignedHeaders=host&actor_id=49572294&key_id=0&repo_id=632201685)
 
 ### 💡 Result Interpretation & Communicating Results
 
